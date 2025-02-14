@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="report_patient_id_card_xlsx"
+        model="hospital.patient"
+        string="Patient ID Card Report"
+        report_type="xlsx"
+        name="jyot_hospital_management.report_patient_id_card_xls"
+        file="jyot_hospital_management.report_patient_id_card_xls"
+        attachment_use="True"
+    />
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_open_invoice" model="ir.actions.act_window">
+        <field name="name">Open Invoice</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="account.view_move_tree"/>
+        <field name="target">current</field>
+    </record>
+
+    <record id="action_hospital_tags" model="ir.actions.act_window">
+        <field name="name">Tags</field>
+        <field name="res_model">hospital.tags</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_hospital_invoice" model="ir.actions.act_window">
+        <field name="name">Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first tag
+            </p>
+        </field>
+    </record>
+
+    <record id="action_medicine" model="ir.actions.act_window">
+        <field name="name">Medicines</field>
+        <field name="res_model">pharmacy.medicine</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+{
+    "name": "Hospital Management System",
+    "version": "17.0.1.0.0",
+    "sequence": 1,
+    "summary": " Hospital Management system ",
+    "description": """
+    """,
+    "author": "Tanishq Nayak",
+    "website": "https://www.instagram.com/._tanisq12._?igsh=MWw2N3dpZmYyMzQ1Mg==",
+    "license": "LGPL-3",
+    "depends": [
+        "mail",
+        "base",
+        "account",
+        "sale_management",
+        "website",
+    ],
+    "category": "Healthcare",
+    "data": [
+        "security/ir.model.access.csv",
+        "security/security.xml",
+        "data/sequence_numbers.xml",
+        "data/action.xml",
+        "data/scheduled_action.xml",
+        "wizard/create_appointment_view.xml",
+        "wizard/search_appointment_view.xml",
+        "views/patient_view.xml",
+        "views/doctor_view.xml",
+        "views/appointment_view.xml",
+        "views/kids_view.xml",
+        "views/patient_gender_view.xml",
+        "views/report_patient_id_card.xml",
+        "views/account_move_views.xml",
+        "views/hospital_menu_views.xml",
+        "views/tags_view.xml",
+        "views/sale_order_views.xml",
+        "views/sale_order_line_views.xml",
+        "views/pharmacy_views.xml",
+        "views/template.xml",
+        # "views/dashboard.xml", //External_id failed - panding [priority:2]
+        # "views/website_form.xml",
+        "report/patient_details_template.xml",
+        "report/patient_card.xml",
+        "report/report_actions.xml",
+        "report/doctort_report_tempate.xml",
+        "report/appointment_report.xml",
+    ],
+    "demo": [
+        "data/appointment_demo.xml",
+        "data/doctor_demo.xml",
+        "data/patient_demo.xml",
+        "data/pharmacy_demo.xml",
+    ],
+    "installable": True,
+    "application": True,
+    "auto_install": False,
+    "maintainers": ["TAN"],
+    "development_status": "Beta",  # Options: 'Alpha', 'Beta', 'Production/Stable', 'Mature'
+    "contributors": [
+        "Contributor Name <mtanishq12@gmail.com>",
+        "Another Contributor <mtanishq12@gmail.com>",
+    ],
+    "support": "mtanishq12@gmail.com",
+    "price": 20,  # Price of the module, for Odoo App Store
+    "currency": "$",  # Currency of the price
+}

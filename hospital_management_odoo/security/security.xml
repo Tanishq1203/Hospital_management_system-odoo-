@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Group Security  -->
+    <record id="group_hospital_user" model="res.groups">
+        <field name="name">Hospital User</field>
+    </record>
+</odoo>

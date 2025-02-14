@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sample Medicines -->
+        <record id="medicine_1" model="pharmacy.medicine">
+            <field name="name">Paracetamol</field>
+            <field name="description">Used to treat fever and mild to moderate pain.</field>
+            <field name="price">1.50</field>
+            <field name="stock_quantity">100</field>
+            <field name="units">milligram</field>
+        </record>
+        <record id="medicine_2" model="pharmacy.medicine">
+            <field name="name">Amoxicillin</field>
+            <field name="description">Antibiotic used to treat bacterial infections.</field>
+            <field name="price">2.00</field>
+            <field name="stock_quantity">200</field>
+            <field name="units">milligram</field>
+        </record>
+        <record id="medicine_3" model="pharmacy.medicine">
+            <field name="name">Ibuprofen</field>
+            <field name="description">Used to reduce fever and treat pain or inflammation.</field>
+            <field name="price">0.80</field>
+            <field name="stock_quantity">150</field>
+            <field name="units">milligram</field>
+        </record>
+        <record id="medicine_4" model="pharmacy.medicine">
+            <field name="name">Vitamin C</field>
+            <field name="description">Used to prevent or treat low levels of vitamin C in people who do not get enough of the vitamin from their diets.</field>
+            <field name="price">0.50</field>
+            <field name="stock_quantity">250</field>
+            <field name="units">milligram</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--  Appointment Report template -->
+    <template id="report_appointment_details">
+        <div class="col-6" name="watermark">
+        <span style="-webkit-transform: rotate(-20deg); color: pink; font-size: 9em; text-align: center; position: absolute; opacity: 0.4;">
+            Jyot Hospital
+        </span>
+        <t t-call="web.html_container">
+             <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h2>Appointment Report</h2>
+                    <table>
+                    <tr>
+                        <td>
+                            <strong>Order Reference:</strong>
+                            <span t-esc="doc.name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Patient:</strong>
+                            <span t-esc="doc.patient_id.name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Age:</strong>
+                            <span t-esc="doc.age"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Doctor:</strong>
+                            <span t-esc="doc.doctor_id.doctor_name"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Gender:</strong>
+                            <span t-esc="dict(doc._fields['gender'].selection).get(doc.gender)"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Status:</strong> <span t-esc="dict(doc._fields['state'].selection).get(doc.state)"/>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <strong>Description:</strong>
+                        </td>
+                    </tr>
+
+                   <tr>
+                        <td>
+                            <span t-esc="doc.note"/>
+                        </td>
+                    </tr>
+                </table>
+                    <p><strong>Date:</strong> <span t-esc="doc.date_appointment"/></p>
+                    <p><strong>Check Up Time:</strong> <span t-esc="doc.date_checkup"/></p>
+                    <p><strong>Prescription:</strong></p>
+                    <p t-esc="doc.prescription"/>
+                    <table class="table table-sm mt32">
+                        <thead>
+                            <tr>
+                                <th>Medicine</th>
+                                <th>Dosage</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="doc.prescription_line_ids" t-as="line">
+                                <td><span t-esc="line.name"/></td>
+                                <td><span t-esc="line.qty"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </div>
+    </template>
+</odoo>

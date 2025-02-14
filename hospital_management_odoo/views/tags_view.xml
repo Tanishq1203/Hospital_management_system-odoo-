@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Tag tree View (editable) -->
+    <record id="tag_view_tree" model="ir.ui.view">
+        <field name="name">tag.view.tree</field>
+        <field name="model">hospital.tags</field>
+        <field name="arch" type="xml">
+            <tree string="Tags" editable="bottom" sample="1">
+                <field name="name"/>
+                <field name="color" widget="color_picker" />
+            </tree>
+        </field>
+    </record>
+
+
+</odoo>

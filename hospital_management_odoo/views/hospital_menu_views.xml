@@ -1,0 +1,26 @@
+<odoo>
+    <!-- Menus  -->
+    <menuitem id="menu_hospital_root" name="Hospital" sequence="10"/>
+
+    <menuitem id="menu_appointment_root" name="Appointments" parent="menu_hospital_root" sequence="10"/>
+    <menuitem id="menu_appointment" name="Appointments" parent="menu_appointment_root" action="action_hospital_appointment" sequence="10"/>
+    <menuitem id="menu_create_appointment" name="Create Appointment" parent="menu_appointment_root" action="action_create_appointment" sequence="20"/>
+    <menuitem id="menu_search_appointment" name="Search Appointment" parent="menu_appointment_root" action="action_search_appointment" sequence="30"/>
+
+    <menuitem id="menu_doctor_root" name="Doctors" parent="menu_hospital_root" sequence="20"/>
+    <menuitem id="menu_doctor" name="Doctors" parent="menu_doctor_root" action="action_hospital_doctor" sequence="10"/>
+
+    <menuitem id="menu_patient_root" name="Patients" parent="menu_hospital_root" sequence="30"/>
+    <menuitem id="menu_patient" name="Patients" parent="menu_patient_root" action="action_hospital_patient" sequence="10"/>
+    <menuitem id="menu_kids" name="Kids" parent="menu_patient_root" action="action_hospital_kids" sequence="20"/>
+    <menuitem id="menu_male_patients" name="Male Patients" parent="menu_patient_root" action="action_male_patients" sequence="30"/>
+    <menuitem id="menu_female_patients" name="Female Patients" parent="menu_patient_root" action="action_female_patients" sequence="40"/>
+
+    <menuitem id="menu_invoice" name="Invoice" parent="menu_hospital_root" action="action_hospital_invoice" sequence="40"/>
+    <menuitem id="menu_configuration_root" name="Configuration" parent="menu_hospital_root" sequence="60"/>
+    <menuitem id="menu_tags" name="Tags" parent="menu_configuration_root" action="action_hospital_tags" sequence="10"/>
+
+    <menuitem id="menu_pharmacy_root" name="Pharmacy" parent="menu_hospital_root" sequence="50"/>
+
+    <menuitem id="menu_medicine" name="Medicines" parent="menu_pharmacy_root" action="action_medicine"/>
+</odoo>
